@@ -13,8 +13,8 @@ public:
 
     int probeIndex(const T& key, int i) const override {
         // TODO: Implement double hashing
-        place = this->hash1(key);
-        offset = hash2(key);
+        int place = this->hash1(key);
+        int offset = hash2(key);
 
         return (place + offset * i) % this->M;
     }
