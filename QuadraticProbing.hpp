@@ -9,7 +9,8 @@ public:
 
     int probeIndex(const T& key, int i) const override {
         // TODO: Implement quadratic probing
-        return 0;
+        int place = this->hash1(key);
+        return (place + i*i) % this->M;
     }
 
    
